@@ -1,0 +1,16 @@
+{
+  "name": "istrolid-decompiler",
+  "version": "1.0.0",
+  "description": "A quick tool to decompile and recompile istrolid's main js file.",
+  "dependencies": {
+    "fs-extra": "^7.0.1"
+  },
+  "devDependencies": {
+    "asar": "^0.14.6"
+  },
+  "scripts": {
+    "pack": "node pack && asar pack app app.asar",
+    "unpack": "asar extract app.asar app && node unpack"
+  },
+  "license": "ISC"
+}
